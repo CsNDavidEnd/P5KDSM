@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* src/index.css vagy src/App.css */
+
+/* Felülírjuk a react-datepicker idő beviteli mezőjének appearance tulajdonságát */
+.react-datepicker__input-time-container .react-datepicker-time__input-container .react-datepicker-time__input input[type=time] {
+  /* Megtartjuk a Firefox kompatibilitás miatt (bár lehet, már nem is kellene) */
+  -moz-appearance: textfield;
+  /* Hozzáadjuk a szabványos tulajdonságot a modern böngészőkhöz */
+  appearance: textfield;
+}
